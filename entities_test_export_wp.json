@@ -1,0 +1,149 @@
+[{
+    "ID": "G1",
+    "entity": "extra_confirmed",
+    "values": [
+      {
+        "type": "synonyms",
+        "value": "no",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "yes",
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "ID": "G2",
+    "entity": "pizza_place",
+    "values": [
+      {
+        "type": "synonyms",
+        "value": "go",
+        "synonyms": [
+          "home",
+          "take",
+          "take out"
+        ]
+      },
+      {
+        "type": "synonyms",
+        "value": "stay",
+        "synonyms": [
+          "dine in",
+          "eat in",
+          "eat there",
+          "restaurant"
+        ]
+      }
+    ]
+  },
+  {
+    "ID": "G3",
+    "entity": "pizza_size",
+    "values": [
+      {
+        "type": "synonyms",
+        "value": "large",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "medium",
+        "synonyms": [
+          "regular"
+        ]
+      },
+      {
+        "type": "synonyms",
+        "value": "small",
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "ID": "G4",
+    "entity": "pizza_toppings",
+    "values": [
+      {
+        "type": "synonyms",
+        "value": "anchovies",
+        "synonyms": [
+          "anchovy"
+        ]
+      },
+      {
+        "type": "synonyms",
+        "value": "cheese",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "ham",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "mushrooms",
+        "synonyms": [
+          "mushroom"
+        ]
+      },
+      {
+        "type": "synonyms",
+        "value": "olive",
+        "synonyms": [
+          "olives"
+        ]
+      },
+      {
+        "type": "synonyms",
+        "value": "onion",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "pepperoni",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "salami",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "sausage",
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "ID": "G5",
+    "entity": "pizza_type",
+    "values": [
+      {
+        "type": "synonyms",
+        "value": "cheese",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "margherita",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "quatro formaggi",
+        "synonyms": []
+      },
+      {
+        "type": "synonyms",
+        "value": "vegetarian",
+        "synonyms": [
+          "vegetariana"
+        ]
+      }
+    ]
+  }]

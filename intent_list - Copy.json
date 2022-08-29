@@ -1,0 +1,59 @@
+[
+    {
+        "ID": "G1",
+        "intent": "password_reset",
+        "examples": [
+            {
+                "text": "I forgot my password"
+            },
+            {
+                "text": "I can't log in"
+            },
+            {
+                "text": "I can't access the site"
+            },
+            {
+                "text": "My log in is failing"
+            },
+            {
+                "text": "I need to reset my password"
+            }
+        ]
+    },
+    {
+        "ID": "G2",
+        "intent": "account_closure",
+        "examples": [
+            {
+                "text": "I want to close my account"
+            },
+            {
+                "text": "I want to terminate my account"
+            }
+        ]
+    },
+    {
+        "ID": "G3",
+        "intent": "account_creation",
+        "examples": [
+            {
+                "text": "I want to open an account"
+            },
+            {
+                "text": "Create account"
+            }
+        ]
+    },
+    {
+        "ID": "G4",
+        "intent": "complaint",
+        "examples": [
+            {
+                "text": "A member of staff was being rude"
+            },
+            {
+                "text": "I have a complaint"
+            }
+        ]
+    }
+]

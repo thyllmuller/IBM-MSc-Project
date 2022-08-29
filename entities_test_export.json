@@ -1,0 +1,22 @@
+{
+    "ID": "K1",
+    "entity": "account_type",
+    "values": [
+        {
+            "type": "synonyms",
+            "value": "business",
+            "synonyms": [
+                "corporate",
+                "company"
+            ]
+        },
+        {
+            "type": "synonyms",
+            "value": "personal",
+            "synonyms": [
+                "vanguard",
+                "student"
+            ]
+        }
+    ]
+}

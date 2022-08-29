@@ -1,0 +1,26 @@
+[
+    {
+        "ID": "G1",
+        "Intent": "password_reset",
+        "Examples": [
+            "I forgot my password.",
+            "I can't log in.",
+            "I want to reset my password."
+        ]
+    },
+    {
+        "ID": "G2",
+        "Intent": "account_closure",
+        "Examples": "I want to close my account."
+    },
+    {
+        "ID": "G3",
+        "Intent": "account_creation",
+        "Examples": "I want to open an account."
+    },
+    {
+        "ID": "G4",
+        "Intent": "complaint",
+        "Examples": "A member of staff was being rude to me."
+    }
+]

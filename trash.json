@@ -1,0 +1,27 @@
+{
+  "type": "standard",
+  "title": "Anything else",
+  "output": {
+    "generic": [
+      {
+        "values": [
+          {
+            "text": "I didn't understand. You can try rephrasing."
+          },
+          {
+            "text": "Can you reword your statement? I'm not understanding."
+          },
+          {
+            "text": "I didn't get your meaning."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  },
+  "conditions": "anything_else",
+  "dialog_node": "Anything else",
+  "previous_sibling": "Welcome",
+  "disambiguation_opt_out": true
+}

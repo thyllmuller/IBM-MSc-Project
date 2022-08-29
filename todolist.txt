@@ -1,0 +1,36 @@
+error handling - if the json is empty, you cant view details of either - therefore it crashes cos no code is found.
+error handling - add in while true to the if loops that break if you go over them multiple times e.g option 5
+
+
+
+
+
+features - add description to intents
+features - intent and entity view details can be cleaner in the print via a for loop
+features - delete entire intent/entity (issue is prolly ids..)
+features - sequential setting in mainscript_deployment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

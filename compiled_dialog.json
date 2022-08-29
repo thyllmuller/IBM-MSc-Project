@@ -1,0 +1,103 @@
+[
+    {
+        "type": "standard",
+        "title": "Welcome",
+        "output": {
+            "generic": [
+                {
+                    "values": [
+                        {
+                            "text": "Welcome to Pizza Topping Basic Demonstration, you can order a pizza out of a few selected types and sizes and add selected toppings. Ask for Help if needed."
+                        }
+                    ],
+                    "response_type": "text",
+                    "selection_policy": "sequential"
+                }
+            ]
+        },
+        "conditions": "welcome",
+        "dialog_node": "Welcome"
+    },
+    {
+        "type": "standard",
+        "title": "Reset",
+        "output": {
+            "generic": [
+                {
+                    "values": [
+                        {
+                            "text": "Let's start over"
+                        }
+                    ],
+                    "response_type": "text",
+                    "selection_policy": "sequential"
+                }
+            ]
+        },
+        "conditions": "#reset",
+        "dialog_node": "Reset",
+        "context": {
+            "pizza_size": null,
+            "pizza_place": null,
+            "pizza_type": null,
+            "pizza_toppings": null
+        },
+        "next_step": {
+            "behavior": "jump_to",
+            "selector": "body",
+            "dialog_node": "Welcome"
+        },
+        "previous_sibling": "Pizza_Ordering"
+    },
+    {
+        "type": "standard",
+        "title": "Fallback",
+        "output": {
+            "generic": [
+                {
+                    "values": [
+                        {
+                            "text": "You can order a small, medium or large pizza. Typed are Cheese, and you can add more ingredients, margherita, quatro formaggi, vegetarian. If you want to start with cheese, you can add ingredients. We offer pepperoni, sausage, ham, olice, onion, anchovies, mushrooms, or salami."
+                        }
+                    ],
+                    "response_type": "text",
+                    "selection_policy": "sequential"
+                }
+            ]
+        },
+        "conditions": "#anything_else",
+        "dialog_node": "Fallback",
+        "previous_sibling": "Reset",
+        "digress_in": "not_available",
+        "digress_out": "allow_all"
+    },
+    {
+        "type": "event_handler",
+        "output": {
+            "text": {
+                "values": [
+                    "You can choose size (small, medium, large), type (cheese, margherita, quatro formaggi, or vegetarian) and extra ingredients."
+                ]
+            }
+        },
+        "parent": "Pizza_Ordering",
+        "metadata": {},
+        "conditions": "#help",
+        "event_name": "generic",
+        "dialog_node": "handler_1_1880993821032"
+    },
+    {
+        "type": "frame",
+        "title": "Pizza_Ordering",
+        "output": {},
+        "metadata": {
+            "fallback": "leave"
+        },
+        "conditions": "#order",
+        "digress_in": "does_not_return",
+        "dialog_node": "Pizza_Ordering",
+        "digress_out": "allow_all",
+        "previous_sibling": "Welcome",
+        "digress_out_slots": "allow_all"
+    }
+]

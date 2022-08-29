@@ -1,0 +1,12 @@
+{
+    "ID": "G1",
+    "intent": "password_reset",
+    "examples": [
+        {
+            "text": "I forgot my password"
+        },
+        {
+            "text": "I want to reset my password"
+        }
+    ]
+}

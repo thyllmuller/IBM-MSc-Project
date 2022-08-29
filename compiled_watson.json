@@ -1,0 +1,111 @@
+{
+    "intents": [
+        {
+            "ID": "G1",
+            "intent": "password_reset",
+            "examples": [
+                {
+                    "text": "I forgot my password"
+                },
+                {
+                    "text": "I want to reset my password"
+                }
+            ]
+        }
+    ],
+    "entities": [
+        {
+            "ID": "K1",
+            "entity": "account_type",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "business",
+                    "synonyms": [
+                        "corporate",
+                        "company"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "personal",
+                    "synonyms": [
+                        "vanguard",
+                        "student"
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "api_version": {
+            "major_version": "v2",
+            "minor_version": "2018-11-08"
+        }
+    },
+    "dialog_nodes": [
+        {
+            "type": "standard",
+            "title": "anything_else",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "I didn't understand, can you try rephrasing."
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "conditions": "",
+            "dialog_node": "anything_else",
+            "previous_sibling": "welcome"
+        },
+        {
+            "type": "standard",
+            "title": "welcome",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "Welcome, how can I help you?"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "dialog_node": "welcome"
+        }
+    ],
+    "counterexamples": [],
+    "system_settings": {
+        "off_topic": {
+            "enabled": true
+        },
+        "disambiguation": {
+            "prompt": "Did you mean:",
+            "enabled": true,
+            "randomize": true,
+            "max_suggestions": 5,
+            "suggestion_text_policy": "title",
+            "none_of_the_above_prompt": "None of the above"
+        },
+        "human_agent_assist": {
+            "prompt": "Did you mean:"
+        },
+        "intent_classification": {
+            "training_backend_version": "v2"
+        },
+        "spelling_auto_correct": true
+    },
+    "learning_opt_out": false,
+    "name": "Password Reset",
+    "language": "en",
+    "description": "Basic Password Reset Request"
+}

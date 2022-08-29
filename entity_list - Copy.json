@@ -1,0 +1,45 @@
+[
+    {
+        "ID": "K1",
+        "entity": "account_type",
+        "values": [
+            {
+                "type": "synonyms",
+                "value": "business",
+                "synonyms": [
+                    "corporate"
+                ]
+            },
+            {
+                "type": "synonyms",
+                "value": "personal",
+                "synonyms": [
+                    "vanguard",
+                    "student"
+                ]
+            }
+        ]
+    },
+    {
+        "ID": "K2",
+        "entity": "beverage",
+        "values": [
+            {
+                "type": "synonyms",
+                "value": "hot",
+                "synonyms": [
+                    "heated",
+                    "warm"
+                ]
+            },
+            {
+                "type": "synonyms",
+                "value": "cold",
+                "synonyms": [
+                    "ice",
+                    "freezing"
+                ]
+            }
+        ]
+    }
+]

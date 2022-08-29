@@ -1,0 +1,89 @@
+[
+  {
+    "ID": "K1",
+    "intent": "exit",
+    "examples": [
+      {
+        "text": "cancel"
+      },
+      {
+        "text": "exit"
+      },
+      {
+        "text": "get me out"
+      },
+      {
+        "text": "get me out of here"
+      },
+      {
+        "text": "I'm done"
+      },
+      {
+        "text": "no"
+      }
+    ]
+  },
+  {
+    "ID": "K2",
+    "intent": "help",
+    "examples": [
+      {
+        "text": "help"
+      },
+      {
+        "text": "help please"
+      },
+      {
+        "text": "I don't understand"
+      },
+      {
+        "text": "What can I do"
+      }
+    ]
+  },
+  {
+    "ID": "K3",
+    "intent": "order",
+    "examples": [
+      {
+        "text": "Can I get a pizza margherita, small please"
+      },
+      {
+        "text": "I am hungry"
+      },
+      {
+        "text": "I'd like a pizza"
+      },
+      {
+        "text": "I want to order a large pizza"
+      },
+      {
+        "text": "I want to order a pizza"
+      },
+      {
+        "text": "order"
+      },
+      {
+        "text": "za"
+      }
+    ]
+  },
+  {
+    "ID": "K4",
+    "intent": "reset",
+    "examples": [
+      {
+        "text": "begin"
+      },
+      {
+        "text": "delete the inputs"
+      },
+      {
+        "text": "reset"
+      },
+      {
+        "text": "start again"
+      }
+    ]
+  }
+]

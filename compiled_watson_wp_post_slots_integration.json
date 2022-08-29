@@ -1,0 +1,358 @@
+{
+    "intents": [
+        {
+            "ID": "K1",
+            "intent": "exit",
+            "examples": [
+                {
+                    "text": "cancel"
+                },
+                {
+                    "text": "exit"
+                },
+                {
+                    "text": "get me out"
+                },
+                {
+                    "text": "get me out of here"
+                },
+                {
+                    "text": "I'm done"
+                },
+                {
+                    "text": "no"
+                }
+            ]
+        },
+        {
+            "ID": "K2",
+            "intent": "help",
+            "examples": [
+                {
+                    "text": "help"
+                },
+                {
+                    "text": "help please"
+                },
+                {
+                    "text": "I don't understand"
+                },
+                {
+                    "text": "What can I do"
+                }
+            ]
+        },
+        {
+            "ID": "K3",
+            "intent": "order",
+            "examples": [
+                {
+                    "text": "Can I get a pizza margherita, small please"
+                },
+                {
+                    "text": "I am hungry"
+                },
+                {
+                    "text": "I'd like a pizza"
+                },
+                {
+                    "text": "I want to order a large pizza"
+                },
+                {
+                    "text": "I want to order a pizza"
+                },
+                {
+                    "text": "order"
+                },
+                {
+                    "text": "za"
+                }
+            ]
+        },
+        {
+            "ID": "K4",
+            "intent": "reset",
+            "examples": [
+                {
+                    "text": "begin"
+                },
+                {
+                    "text": "delete the inputs"
+                },
+                {
+                    "text": "reset"
+                },
+                {
+                    "text": "start again"
+                }
+            ]
+        }
+    ],
+    "entities": [
+        {
+            "ID": "G1",
+            "entity": "extra_confirmed",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "no",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "yes",
+                    "synonyms": []
+                }
+            ]
+        },
+        {
+            "ID": "G2",
+            "entity": "pizza_place",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "go",
+                    "synonyms": [
+                        "home",
+                        "take",
+                        "take out"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "stay",
+                    "synonyms": [
+                        "dine in",
+                        "eat in",
+                        "eat there",
+                        "restaurant"
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": "G3",
+            "entity": "pizza_size",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "large",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "medium",
+                    "synonyms": [
+                        "regular"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "small",
+                    "synonyms": []
+                }
+            ]
+        },
+        {
+            "ID": "G4",
+            "entity": "pizza_toppings",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "anchovies",
+                    "synonyms": [
+                        "anchovy"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "cheese",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "ham",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "mushrooms",
+                    "synonyms": [
+                        "mushroom"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "olive",
+                    "synonyms": [
+                        "olives"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "onion",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "pepperoni",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "salami",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "sausage",
+                    "synonyms": []
+                }
+            ]
+        },
+        {
+            "ID": "G5",
+            "entity": "pizza_type",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "cheese",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "margherita",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "quatro formaggi",
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "vegetarian",
+                    "synonyms": [
+                        "vegetariana"
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "api_version": {
+            "major_version": "v2",
+            "minor_version": "2018-11-08"
+        }
+    },
+    "dialog_nodes": [
+        {
+            "type": "standard",
+            "title": "Fallback",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "You can order a small, medium or large pizza. Typed are Cheese, and you can add more ingredients, margherita, quatro formaggi, vegetarian. If you want to start with cheese, you can add ingredients. We offer pepperoni, sausage, ham, olice, onion, anchovies, mushrooms, or salami."
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "conditions": "anything_else",
+            "dialog_node": "Fallback",
+            "previous_sibling": "Reset"
+        },
+        {
+            "type": "standard",
+            "title": "Reset",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "Let's start over"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "conditions": "#welcome",
+            "dialog_node": "Reset",
+            "context": {
+                "pizza_size": null,
+                "pizza_type": null,
+                "pizza_place": null,
+                "pizza_toppings": null
+            },
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "body",
+                "dialog_node": "welcome"
+            },
+            "previous_sibling": "Pizza_ordering"
+        },
+        {
+            "type": "standard",
+            "title": "welcome",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "Welcome to Pizza Topping Basic Demonstration, you can order a pizza out of a few selected types and sizes and add selected toppings. Ask for Help if needed."
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "dialog_node": "welcome"
+        },
+        {
+            "type": "frame",
+            "title": "Pizza_ordering",
+            "output": {},
+            "metadata": {
+                "fallback": "leave"
+            },
+            "conditions": "Let's start over",
+            "digress_in": "does_not_return",
+            "dialog_node": "Pizza_ordering",
+            "digress_out": "allow_all",
+            "previous_sibling": "welcome",
+            "digress_out_slots": "allow_all"
+        }
+    ],
+    "counterexamples": [],
+    "system_settings": {
+        "off_topic": {
+            "enabled": true
+        },
+        "disambiguation": {
+            "prompt": "Did you mean:",
+            "enabled": true,
+            "randomize": true,
+            "max_suggestions": 5,
+            "suggestion_text_policy": "title",
+            "none_of_the_above_prompt": "None of the above"
+        },
+        "human_agent_assist": {
+            "prompt": "Did you mean:"
+        },
+        "intent_classification": {
+            "training_backend_version": "v2"
+        },
+        "spelling_auto_correct": true
+    },
+    "learning_opt_out": false,
+    "name": "Watson Pizzeria",
+    "language": "en",
+    "description": "Pizzeria order virtual bot - test deployment"
+}
